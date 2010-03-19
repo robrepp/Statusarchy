@@ -4,3 +4,15 @@ Statusarchy, the opensource clone of Panic's status board:
 Team:
 	robbiet480 - Project leader
 	rsully - development
+
+Tools:
+	CSS 3 & Webkit
+	jQuery
+	PHP 5
+	MySQL
+
+Recommended (LAMP) installation:
+	(L) Linux server (Debian, Ubuntu, etc)
+	(A) Apache 2
+	(M) MySQL 5
+	(P) PHP 5.3
