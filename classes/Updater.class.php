@@ -1,4 +1,5 @@
 <?php
+// The SQL tables, as a name->query pair array
 $sql_tables = array(
 	'modules' => 'CREATE TABLE `modules` (
 		`id` int(11) NOT NULL AUTO_INCREMENT,
@@ -7,7 +8,7 @@ $sql_tables = array(
 		PRIMARY KEY (`id`)
 		) ENGINE=MyISAM DEFAULT charset=latin1;'
 );
-
+// Function which can splice up queries into an array. Currently unused, unneeded.
 function formatQueries(&$queries) {
 	$array = explode(';', $queries);
 	foreach($array as &$value) {
@@ -46,11 +47,11 @@ class Updater
 		$db->query($sql_tables[$t]);
 	}
 	static function tableExists($t) {
-		return isset(self::$tables[$t]); // Untested. Cool concept though
+		return isset(self::showTables()[$t]); // Untested. Cool concept though
 	}
 	static function sqlInstall() {
 		global $sql_tables;
-		foreach($sql_tables as &$table) {
+		foreach($sql_tables as $table => &$query) {
 			if(self::tableExists($table) === true) continue;
 			else addTable($table);
 		}
