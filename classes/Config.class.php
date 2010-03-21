@@ -6,6 +6,7 @@ class Config
 		'mysql_host' => 'localhost',
 		'mysql_user' => 'root',
 		'mysql_pass' => '',
+		'mysql_prefix' => '',
 		'mysql_db' => 'database',
 		'mysql_port' => 3306
 	);

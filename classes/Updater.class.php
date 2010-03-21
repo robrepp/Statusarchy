@@ -1,24 +1,13 @@
 <?php
 // The SQL tables, as a name->query pair array
 $sql_tables = array(
-	'modules' => 'CREATE TABLE `modules` (
+	'modules' => 'CREATE TABLE `$t` (
 		`id` int(11) NOT NULL AUTO_INCREMENT,
 		`title` varchar(200) NOT NULL,
 		``
 		PRIMARY KEY (`id`)
 		) ENGINE=MyISAM DEFAULT charset=latin1;'
 );
-// Function which can splice up queries into an array. Currently unused, unneeded.
-function formatQueries(&$queries) {
-	$array = explode(';', $queries);
-	foreach($array as &$value) {
-		if($value == $null || trim($value) == '')
-			unset($value);
-		else
-			$value = $value . ";";
-	}
-	return $array;
-}
 
 class Updater
 {
@@ -26,7 +15,11 @@ class Updater
 	// Need to decide how this is going to run
 	static function run()
 	{
-		
+		global $sql_tables;
+		self::setupTables($sql_tables);
+	}
+	static function setupTables(&$tables) {
+		foreach($tables as $key => &$value) str_replace('$table', Config::get('mysql_prefix') . $key, $value);
 	}
 	// Helpers
 	static function showTables() {
@@ -57,4 +50,17 @@ class Updater
 		}
 	}
 }
+
+// Function which can splice up queries into an array. Currently unused, unneeded.
+function formatQueries(&$queries) {
+	$array = explode(';', $queries);
+	foreach($array as &$value) {
+		if($value == $null || trim($value) == '')
+			unset($value);
+		else
+			$value = $value . ";";
+	}
+	return $array;
+}
+
 ?>

@@ -4,6 +4,7 @@ $config = array(
 	'mysql_host' => 'localhost',
 	'mysql_user' => 'root',
 	'mysql_pass' => '',
+	'mysql_prefix' => 'sa_',
 	'mysql_db' => '',
 	'mysql_port' => 3306 // Don't change in most cases
 );
