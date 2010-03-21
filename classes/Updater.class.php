@@ -1,11 +1,19 @@
 <?php
 // The SQL tables, as a name->query pair array
 $sql_tables = array(
-	'modules' => 'CREATE TABLE `$t` (
-		`id` int(11) NOT NULL AUTO_INCREMENT,
-		`title` varchar(200) NOT NULL,
-		PRIMARY KEY (`id`)
-		) ENGINE=MyISAM DEFAULT charset=latin1;'
+	'modules' => 'CREATE TABLE `$table` (
+	  `id` int(11) NOT NULL auto_increment,
+	  `title` varchar(250) NOT NULL,
+	  `data` text NOT NULL,
+	  PRIMARY KEY  (`id`)
+	) ENGINE=MyISAM DEFAULT CHARSET=latin1;',
+	'modules_enabled' => 'CREATE TABLE `$table` (
+	  `id` int(11) NOT NULL auto_increment,
+	  `comment` varchar(340) default NULL,
+	  `data` text NOT NULL,
+	  `order` int(11) NOT NULL,
+	  PRIMARY KEY  (`id`)
+	) ENGINE=MyISAM DEFAULT CHARSET=latin1;'
 );
 
 class Updater
