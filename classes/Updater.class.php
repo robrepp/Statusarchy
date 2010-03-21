@@ -4,7 +4,6 @@ $sql_tables = array(
 	'modules' => 'CREATE TABLE `$t` (
 		`id` int(11) NOT NULL AUTO_INCREMENT,
 		`title` varchar(200) NOT NULL,
-		``
 		PRIMARY KEY (`id`)
 		) ENGINE=MyISAM DEFAULT charset=latin1;'
 );
