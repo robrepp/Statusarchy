@@ -69,5 +69,4 @@ function formatQueries(&$queries) {
 	}
 	return $array;
 }
-
 ?>
