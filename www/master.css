@@ -8,11 +8,13 @@ body {
 	margin: 2px auto 2px auto;
 }
 
-/* Classes */
-.wide {
-	
-}
-.narrow {
-	
-}
 
+#modules {
+	
+}
+#modules .narrow {
+	
+}
+#modules .wide {
+	
+}
