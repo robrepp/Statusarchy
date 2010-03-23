@@ -1,3 +1,5 @@
+var reqUrl = 'req.php';
+
 $(document).ready(function(){
 	$('.w3standards').remove(); // These are just to get things validated
 	
@@ -16,4 +18,9 @@ $(document).ready(function(){
 		$('#possibleModules').fadeOut();
 	});
 	$('#possibleModules').fadeOut();
+	
+	
+	// var t = Raphael( $('#graphh').get(0) );
+	// t.g.piechart(320, 240, 100, [55, 20, 13, 32, 5, 1, 2, 10]);
+	
 });
