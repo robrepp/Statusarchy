@@ -8,7 +8,17 @@ body {
 	margin: 2px auto 2px auto;
 }
 
+/* Possible Modules */
+#possibleModules {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#possibleModules li {
+	list-style: none;
+}
 
+/* Modules */
 #modules {
 	
 }

@@ -1,1 +1,13 @@
+/* Main BG */
+body {
+	background-color: rgb(10, 11, 12);
+}
 
+/* Possible modules */
+#possibleModules {
+	background-color: rgb(50, 50, 50);
+}
+#possibleModules li {
+	float: left;
+	margin: 3px 4px 3px 4px;
+}
