@@ -1,5 +1,11 @@
 <?php
-require_once dirname(__FILE__) . '/SimplePie/simplepie.class.php';
+require_once dirname(__FILE__) . '/../../classes/Module.class.php';
+require_once dirname(__FILE__) . '/../../classes/Simplepie.class.php';
+
+class RssModule extends Module
+{
+	
+}
 
 function rss($url)
 {
