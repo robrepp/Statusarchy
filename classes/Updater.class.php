@@ -9,11 +9,12 @@ $sql_tables = array(
 	) ENGINE=MyISAM DEFAULT CHARSET=latin1;',
 	'modules_enabled' => 'CREATE TABLE `$table` (
 	  `id` int(11) NOT NULL auto_increment,
+	  `module_id` int(11) NOT NULL,
 	  `comment` varchar(340) default NULL,
 	  `data` text NOT NULL,
 	  `order` int(11) NOT NULL,
 	  PRIMARY KEY  (`id`)
-	) ENGINE=MyISAM DEFAULT CHARSET=latin1;'
+	) ENGINE=MyISAM DEFAULT CHARSET=latin1'
 );
 
 class Updater
